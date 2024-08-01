@@ -31,8 +31,16 @@ final GoRouter router = GoRouter(
       builder: (context, state) => const MyMakets(),
     ),
     GoRoute(
+      path: "/settings",
+      builder: (context, state) => const ProfileSettings(),
+    ),
+    GoRoute(
       path: "/map",
       builder: (context, state) => const MyMap(),
+    ),
+    GoRoute(
+      path: "/notifications",
+      builder: (context, state) => const MyNotifications(),
     ),
   ],
 );
