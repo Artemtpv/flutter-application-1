@@ -50,6 +50,7 @@ class _MyHomeState extends State<MyHome> {
               ),
             ),
             child: BottomNavigationBar(
+              showUnselectedLabels: true,
               fixedColor: const Color.fromRGBO(105, 121, 248, 100),
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
