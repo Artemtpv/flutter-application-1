@@ -1,4 +1,4 @@
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants/colors_constants.dart';
 import 'package:flutter_application_1/home/home.dart';
 import 'package:flutter_application_1/makets/makets.dart';
@@ -109,4 +109,3 @@ class _BottomState extends State<BottomNavigator> {
     );
   }
 }
-*/
