@@ -13,6 +13,7 @@ class MyHome extends StatefulWidget {
 }
 
 class _MyHomeState extends State<MyHome> {
+  int _selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +47,9 @@ class _MyHomeState extends State<MyHome> {
               backgroundColor: CustomColors.bgBlack,
               onDestinationSelected: (int index) {
                 setState(
-                  () => GoRouter.of(context).push("/profile"),
+                  () {
+                    _selectedIndex = index;
+                  },
                 );
               },
 

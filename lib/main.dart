@@ -47,7 +47,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int currentPageIndex = 0;
   @override
   Widget build(BuildContext context) {
     Theme.of(context);
