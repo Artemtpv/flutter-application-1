@@ -51,6 +51,7 @@ class _MyHomeState extends State<MyHome> {
             ),
             child: BottomNavigationBar(
               backgroundColor: CustomColors.bgBlack,
+              fixedColor: const Color.fromRGBO(105, 121, 248, 100),
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
                   icon: ImageIcon(
@@ -58,6 +59,7 @@ class _MyHomeState extends State<MyHome> {
                     color: CustomColors.bgWhite,
                   ),
                   label: 'Главная',
+                  backgroundColor: CustomColors.bgBlack,
                 ),
                 BottomNavigationBarItem(
                   icon: ImageIcon(
@@ -65,6 +67,7 @@ class _MyHomeState extends State<MyHome> {
                     color: CustomColors.bgWhite,
                   ),
                   label: 'Карта',
+                  backgroundColor: CustomColors.bgBlack,
                 ),
                 BottomNavigationBarItem(
                   icon: ImageIcon(
@@ -72,6 +75,7 @@ class _MyHomeState extends State<MyHome> {
                     color: CustomColors.bgWhite,
                   ),
                   label: 'Макеты',
+                  backgroundColor: CustomColors.bgBlack,
                 ),
                 BottomNavigationBarItem(
                   icon: ImageIcon(
@@ -79,6 +83,7 @@ class _MyHomeState extends State<MyHome> {
                     color: CustomColors.bgWhite,
                   ),
                   label: 'Профиль',
+                  backgroundColor: CustomColors.bgBlack,
                 ),
               ],
               currentIndex: _selectedIndex,
