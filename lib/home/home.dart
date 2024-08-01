@@ -14,6 +14,12 @@ class MyHome extends StatefulWidget {
 
 class _MyHomeState extends State<MyHome> {
   int _selectedIndex = 0;
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,46 +49,37 @@ class _MyHomeState extends State<MyHome> {
                 const TextStyle(fontSize: 14, color: Colors.white60),
               ),
             ),
-            child: NavigationBar(
+            child: BottomNavigationBar(
               backgroundColor: CustomColors.bgBlack,
-              onDestinationSelected: (int index) {
-                setState(
-                  () {
-                    _selectedIndex = index;
-                  },
-                );
-              },
-
-              // вкладка избранное тебе не понадобится убери ее - исправлено
-              destinations: const [
-                NavigationDestination(
+              items: const <BottomNavigationBarItem>[
+                BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/icons/home.png'),
                     color: CustomColors.bgWhite,
                   ),
                   label: 'Главная',
-                ), // раздел главная страница
-                NavigationDestination(
+                ),
+                BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/icons/map.png'),
                     color: CustomColors.bgWhite,
                   ),
                   label: 'Карта',
-                ), // раздел карта
-                NavigationDestination(
+                ),
+                BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/icons/bookmark.png'),
                     color: CustomColors.bgWhite,
                   ),
                   label: 'Макеты',
-                ), // раздел макеты
-                NavigationDestination(
+                ),
+                BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/icons/user.png'),
                     color: CustomColors.bgWhite,
                   ),
                   label: 'Профиль',
-                ), // раздел профиль
+                ),
               ],
             ), // нижнее навигационное поле,
           ),
