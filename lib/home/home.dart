@@ -81,6 +81,8 @@ class _MyHomeState extends State<MyHome> {
                   label: 'Профиль',
                 ),
               ],
+              currentIndex: _selectedIndex,
+              onTap: _onItemTapped,
             ), // нижнее навигационное поле,
           ),
         ),
