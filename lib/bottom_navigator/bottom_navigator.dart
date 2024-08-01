@@ -1,4 +1,9 @@
-/*import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constants/colors_constants.dart';
+import 'package:flutter_application_1/home/home.dart';
+import 'package:flutter_application_1/makets/makets.dart';
+import 'package:flutter_application_1/map/map.dart';
+import 'package:flutter_application_1/profile/profile.dart';
 
 class BottomNavigator extends StatefulWidget {
   final Widget? bottomNavigationBar;
@@ -11,39 +16,96 @@ class BottomNavigator extends StatefulWidget {
 }
 
 class _BottomState extends State<BottomNavigator> {
+  int _selectedIndex = 0;
+  final List<Widget> _page = [
+    const MyMap(),
+    const MyMakets(),
+    const ProfileScreen(),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: NavigationBar(
-        backgroundColor: Colors.black,
-        onDestinationSelected: (int index) {
-          setState(
-            () {},
-          );
-        },
-        indicatorColor: Colors.black12,
-
-        // вкладка избранное тебе не понадобится убери ее - исправлено
-        destinations: const [
-          NavigationDestination(
-            icon: Icon(Icons.home_outlined),
-            label: 'Главная',
-          ), // раздел главная страница
-          NavigationDestination(
-            icon: Icon(Icons.map_outlined),
-            label: 'Карта',
-          ), // раздел карта
-          NavigationDestination(
-            icon: Icon(Icons.bookmark_outline_outlined),
-            label: 'Макеты',
-          ), // раздел макеты
-          NavigationDestination(
-            icon: Icon(Icons.person_2_outlined),
-            label: 'Профиль',
-          ), // раздел профиль
-        ],
-      ), // нижнее навигационное поле
+      body: _page[_selectedIndex],
+      bottomNavigationBar: Container(
+        margin: const EdgeInsets.only(top: 0),
+        decoration: const BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black,
+              spreadRadius: 0,
+              blurRadius: 10,
+            ),
+          ],
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(25),
+            topRight: Radius.circular(25),
+          ),
+        ),
+        child: ClipRRect(
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(25),
+            topRight: Radius.circular(25),
+          ),
+          child: NavigationBarTheme(
+            data: NavigationBarThemeData(
+              labelTextStyle: WidgetStateProperty.all(
+                const TextStyle(fontSize: 14, color: Colors.white60),
+              ),
+            ),
+            child: BottomNavigationBar(
+              currentIndex: _selectedIndex,
+              onTap: (index) {
+                setState(() {
+                  _selectedIndex = index;
+                });
+              },
+              showUnselectedLabels: true,
+              fixedColor: const Color.fromRGBO(105, 121, 248, 100),
+              items: const <BottomNavigationBarItem>[
+                BottomNavigationBarItem(
+                  icon: ImageIcon(
+                    AssetImage('assets/icons/home.png'),
+                    color: CustomColors.bgWhite,
+                  ),
+                  label: 'Главная',
+                  backgroundColor: CustomColors.bgBlack,
+                ),
+                BottomNavigationBarItem(
+                  icon: ImageIcon(
+                    AssetImage('assets/icons/map.png'),
+                    color: CustomColors.bgWhite,
+                  ),
+                  label: 'Карта',
+                  backgroundColor: CustomColors.bgBlack,
+                ),
+                BottomNavigationBarItem(
+                  icon: ImageIcon(
+                    AssetImage('assets/icons/bookmark.png'),
+                    color: CustomColors.bgWhite,
+                  ),
+                  label: 'Макеты',
+                  backgroundColor: CustomColors.bgBlack,
+                ),
+                BottomNavigationBarItem(
+                  icon: ImageIcon(
+                    AssetImage('assets/icons/user.png'),
+                    color: CustomColors.bgWhite,
+                  ),
+                  label: 'Профиль',
+                  backgroundColor: CustomColors.bgBlack,
+                ),
+              ],
+            ), // нижнее навигационное поле,
+          ),
+        ),
+      ),
     );
   }
 }
-*/
