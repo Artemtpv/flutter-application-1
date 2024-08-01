@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_application_1/home/home.dart';
-import 'package:flutter_application_1/login_to_app/exit_to_app.dart';
-import 'package:flutter_application_1/login_to_app/login_app.dart';
-import 'package:flutter_application_1/login_to_app/password_recovery.dart';
-import 'package:flutter_application_1/login_to_app/privacy_policy.dart';
-import 'package:flutter_application_1/login_to_app/registration_app.dart';
 import 'package:flutter_application_1/login_to_app/sucsess_login.dart';
 import 'package:flutter_application_1/login_to_app/verification_passed.dart';
 
@@ -25,7 +20,7 @@ final GoRouter router = GoRouter(
   routes: [
     GoRoute(
       path: "/",
-      builder: (context, state) => const SucsessLogin(),
+      builder: (context, state) => const MyHome(),
     ),
     GoRoute(
       path: "/profile",
