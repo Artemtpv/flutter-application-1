@@ -46,7 +46,7 @@ class _MyHomeState extends State<MyHome> {
               backgroundColor: CustomColors.bgBlack,
               onDestinationSelected: (int index) {
                 setState(
-                  () {},
+                  () => GoRouter.of(context).push("/profile"),
                 );
               },
 
