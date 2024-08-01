@@ -50,7 +50,6 @@ class _MyHomeState extends State<MyHome> {
               ),
             ),
             child: BottomNavigationBar(
-              backgroundColor: CustomColors.bgBlack,
               fixedColor: const Color.fromRGBO(105, 121, 248, 100),
               items: const <BottomNavigationBarItem>[
                 BottomNavigationBarItem(
