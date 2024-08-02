@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/bottom_navigator/bottom_navigator.dart';
+
 import 'package:flutter_application_1/router.dart';
 
 //import 'package:flutter_application_1/fieled/fieled.dart';
