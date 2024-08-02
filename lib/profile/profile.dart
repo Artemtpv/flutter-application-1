@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/bottom_navigator/bottom_navigator.dart';
 import 'package:flutter_application_1/constants/colors_constants.dart';
 
 import 'package:flutter_application_1/widgets/border_line.dart';

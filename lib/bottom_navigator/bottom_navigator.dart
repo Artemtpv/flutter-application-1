@@ -18,16 +18,10 @@ class BottomNavigator extends StatefulWidget {
 class _BottomState extends State<BottomNavigator> {
   int _selectedIndex = 0;
   final List<Widget> _page = [
-    const MyMap(),
+    const MyHome(),
     const MyMakets(),
     const ProfileScreen(),
   ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
