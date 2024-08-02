@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 
 class CheckboxMark extends StatefulWidget {
@@ -11,6 +13,7 @@ class _CheckboxMarkState extends State<CheckboxMark> {
   bool isChecked = false;
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_element
     Color(Set<WidgetState> states) {
       const Set<WidgetState> interactiveStates = <WidgetState>{
         WidgetState.pressed,

@@ -17,7 +17,8 @@ class BottomNavigator extends StatefulWidget {
 
 class _BottomState extends State<BottomNavigator> {
   int _selectedIndex = 0;
-  final List<Widget> _page = [
+  final List _page = [
+    const MyHome(),
     const MyMap(),
     const MyMakets(),
     const ProfileScreen(),

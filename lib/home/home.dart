@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/bottom_navigator/bottom_navigator.dart';
 
 import 'package:flutter_application_1/fieled/fieled.dart';
 
@@ -18,7 +17,6 @@ class _MyHomeState extends State<MyHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: const BottomNavigator(),
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Row(

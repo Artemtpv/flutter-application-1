@@ -15,6 +15,7 @@ class _MyNotificationsState extends State<MyNotifications> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         title: Container(
           margin: EdgeInsets.zero,

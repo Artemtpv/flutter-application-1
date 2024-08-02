@@ -42,9 +42,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
           opacity: const AlwaysStoppedAnimation(.9),
         ), // верхнее изображени дома
         backgroundColor: Colors.black,
-        title: const Column(
-          children: [],
-        ),
       ),
       body: ListView(
         children: [
@@ -307,7 +304,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
             ],
-          ), // третья горизонтальная пара фото
+          ),
+
+          // третья горизонтальная пара фото
         ],
       ),
     );
