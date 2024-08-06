@@ -10,7 +10,15 @@ class HorizontalImages extends StatefulWidget {
 class _HorizontalImagesState extends State<HorizontalImages> {
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return  Container(
+            margin: const EdgeInsets.fromLTRB(
+              10.0,
+              10.0,
+              10.0,
+              0.0,
+            ),
+            height: 140,
+            child:  ListView(
       scrollDirection: Axis.horizontal,
       children: [
         Container(
@@ -77,6 +85,10 @@ class _HorizontalImagesState extends State<HorizontalImages> {
           width: 150,
         ), // четвертое фото в горизонтальном ряду формата png
       ],
-    );
-  }
+    ),
+          ); //  горизонтальный, прокручиваемый фото ряд
+
+    
+   
+ }
 }
